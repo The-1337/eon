@@ -1,15 +1,25 @@
 import React from 'react';
-import { StyleSheet, Text, View, Button, Image } from 'react-native';
+import { StyleSheet, Text, View, Button, Image, TouchableHighlight } from 'react-native';
 
 export default class Footer extends React.Component {
   render() {
+
+    test = () => {
+      alert('clicked');
+    }
+
     return (
       <View style={styles.footer}>
 
-        <Button title="Click1"/>
-        <Button title="Click2"/>
-        <Button title="Click3"/>
-        <Button title="Click4"/>
+        <TouchableHighlight
+        onPress={()=>test()}
+        activeOpacity={.5}
+       >
+         <Image source={require('./Resources/search.png')} style={{height:50,width:50,margin:15}}/>
+       </TouchableHighlight>
+        <Button onPress={console.log('hi')} title="Click2"/>
+        <Button onPress={console.log('hi')} title="Click3"/>
+        <Button onPress={console.log('hi')} title="Click4"/>
 
       </View>
     );
