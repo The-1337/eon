@@ -2,6 +2,7 @@ import React from 'react';
 import { StyleSheet, Text, View, Button, Image } from 'react-native';
 import Footer from './components/Footer'
 import Header from './components/Header'
+import RootNavigator from './React-Navigator'
 export default class App extends React.Component {
   render() {
     let pic = {
@@ -11,11 +12,12 @@ export default class App extends React.Component {
 
       <View style={{flex: 1}}>
         <Header/>
-        <View style={styles.mainContent}>
+        {/* <View style={styles.mainContent}>
           <View style={{flex: 1, backgroundColor: 'black'}} />
           <View style={{flex: 1, backgroundColor: 'rgb(32,190,84)'}} />
           <View style={{flex: 1, backgroundColor: 'black'}} />
-        </View>
+        </View> */}
+        <RootNavigator/>
         <Footer style={styles.footer}/>
       </View>
 
