@@ -11,13 +11,13 @@ export default class App extends React.Component {
     return (
 
       <View style={{flex: 1}}>
-        <Header/>
+        {/* <Header/> */}
         {/* <View style={styles.mainContent}>
           <View style={{flex: 1, backgroundColor: 'black'}} />
           <View style={{flex: 1, backgroundColor: 'rgb(32,190,84)'}} />
           <View style={{flex: 1, backgroundColor: 'black'}} />
         </View> */}
-        <RootNavigator/>
+        <RootNavigator style={styles.navigator}/>
         <Footer style={styles.footer}/>
       </View>
 
@@ -27,12 +27,12 @@ export default class App extends React.Component {
 
 const styles = StyleSheet.create({
   mainContent: {
-    flex: 9,
-    backgroundColor: 'black',
+    // flex: 9,
+    // backgroundColor: 'black',
     // alignItems: 'center',
     // justifyContent: 'center',
   },
-  footer:{
+  navigator:{
     flex:2
-  }
+  },
 });

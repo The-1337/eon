@@ -1,9 +1,10 @@
 import React from 'react';
-import { View, Text, Button } from 'react-native';
+import { View, Text, Button, TextInput,StyleSheet } from 'react-native';
 import {StackNavigator} from 'react-navigation';
+import Footer from './components/Footer'
 
 const HomeScreen = ({navigation}) => (
-  <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+  <View style={styles.body}>
     <Text>Home Screen</Text>
     <Button
       onPress={() => navigation.navigate('Details')}
@@ -23,7 +24,10 @@ const RootNavigator = StackNavigator({
   Home: {
     screen: HomeScreen,
     navigationOptions: {
-      headerTitle: 'Home',
+      headerTitle: 'Eon',
+      headerStyle:{
+        backgroundColor:'rgb(32,190,84)'
+      }
     },
   },
   Details: {
@@ -33,5 +37,15 @@ const RootNavigator = StackNavigator({
    },
   },
 });
+
+const styles= StyleSheet.create({
+  body:{
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: 'black',
+  }
+})
+
 
 export default RootNavigator;

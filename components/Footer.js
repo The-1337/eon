@@ -17,7 +17,7 @@ export default class Footer extends React.Component {
        <TouchableHighlight onPress={()=>searchClick()} activeOpacity={.5}>
          <Image source={require('../Resources/search.png')} style={{height:50,width:50,margin:15}}/>
        </TouchableHighlight>
-       
+
        <TouchableHighlight onPress={()=>navigation.navigate('Details')} activeOpacity={.5}>
          <Image source={require('../Resources/home.png')} style={{height:50,width:50,margin:15}}/>
        </TouchableHighlight>
@@ -41,7 +41,7 @@ export default class Footer extends React.Component {
 
 const styles = StyleSheet.create({
   footer: {
-    flex: 1,
+    flexShrink:1,
     backgroundColor: 'rgb(32,190,84)',
     alignItems: 'flex-start',
     justifyContent: 'space-around',
